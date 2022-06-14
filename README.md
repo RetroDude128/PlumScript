@@ -1,5 +1,5 @@
 # PlumScript
-A language for writing scripts for simulation keyboard and mouse inputs.
+A language for writing scripts for simulating keyboard and mouse inputs.
 
 # Syntax
 - `mouse {left/right} down` holds the left/right mouse button down
