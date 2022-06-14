@@ -42,6 +42,9 @@ def parse(text):
                 pyautogui.moveTo(int(x1), int(y1))
                 pyautogui.moveTo(int(x2), int(y2), duration=seconds)
 
+            elif keywords[0] == 'exit':
+                sys.exit()
+
             else:
                 print("Unknown command: " + keywords[0])
 
@@ -56,3 +59,7 @@ if __name__ == '__main__':
         with open(sys.argv[1], 'r') as f:
             text = f.read()
             parse(text)
+    else:
+        while True:
+            inp = input(">>> ")
+            parse(inp)
