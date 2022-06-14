@@ -35,6 +35,13 @@ def parse(text):
                 elif keywords[2] == 'up':
                     pyautogui.mouseUp(button=button)
 
+            elif keywords[0] == 'drag':
+                x1, y1 = keywords[1].split(',')
+                x2, y2 = keywords[2].split(',')
+                seconds = float(keywords[3])
+                pyautogui.moveTo(int(x1), int(y1))
+                pyautogui.moveTo(int(x2), int(y2), duration=seconds)
+
             else:
                 print("Unknown command: " + keywords[0])
 

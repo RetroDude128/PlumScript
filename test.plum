@@ -15,3 +15,7 @@ wait 5
 go 500,500
 mouse right down
 mouse right up
+
+# drag the mouse from x1,y1 to x2,y2 in specified seconds
+wait 10
+drag 0,0 1920,1080 10
