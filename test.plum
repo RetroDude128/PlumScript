@@ -1,3 +1,4 @@
+[INIT]
 # go to x,y position
 go 10,100
 
@@ -19,3 +20,10 @@ mouse right up
 # drag the mouse from x1,y1 to x2,y2 in specified seconds
 wait 10
 drag 1,1 1919,1079 10
+
+[LOOP]
+drag 1900,1060 1900,1 2
+drag 1900,1 1,1 2
+drag 1,1 1,1060 2
+drag 1,1060 1900,1060 2
+exit
