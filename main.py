@@ -82,6 +82,18 @@ def parse(text):
             elif keywords[0] == 'type':
                 text = extract_string(keywords)
                 pyautogui.typewrite(text[1])
+            
+            elif keywords[0] == 'press':
+                key = keywords[1]
+                pyautogui.press(key)
+            
+            elif keywords[0] == 'hold':
+                key = keywords[1]
+                pyautogui.keyDown(key)
+
+            elif keywords[0] == 'release':
+                key = keywords[1]
+                pyautogui.keyUp(key)
 
             elif keywords[0] == 'exit':
                 sys.exit()

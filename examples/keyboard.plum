@@ -1,7 +1,16 @@
 [INIT]
 click left 600,1020
 wait 3
+
 type "HAX lol (typed with PlumScript)"
+press enter
+
+hold e
+wait 5
+release e
+
+type " hold and release test, PlumScript:tm:"
+press enter
 
 [LOOP]
 exit
