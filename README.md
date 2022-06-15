@@ -5,6 +5,7 @@ A language for writing scripts for simulating keyboard and mouse inputs.
 ## Basic
 - `wait {seconds}` waits for the specified number of seconds
 - `exit` stop the script
+- `exec {python/os} {command**}` runs the specified command (python or cmd commands)
 
 ## Mouse
 - `mouse {left/right} down` holds the left/right mouse button down
