@@ -95,6 +95,15 @@ def parse(text):
                 key = keywords[1]
                 pyautogui.keyUp(key)
 
+            elif keywords[0] == 'multipress':
+                keys = keywords[1].split(',')
+                for key in keys[:-1]:
+                    pyautogui.keyDown(key)
+                pyautogui.press(keys[-1])
+                for key in keys[:-1]:
+                    pyautogui.keyUp(key)
+
+
             elif keywords[0] == 'exit':
                 sys.exit()
 
