@@ -1,0 +1,7 @@
+[INIT]
+click left 600,1020
+wait 3
+type "HAX lol (typed with PlumScript)"
+
+[LOOP]
+exit

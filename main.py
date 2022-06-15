@@ -11,6 +11,26 @@ def get_button(button):
     else:
         return "LEFT"
 
+def extract_string(text):
+    ret = []
+    curr = ""
+    string = False
+    for c in text:
+        if c.startswith('"'):
+            string = True
+            c = c[1:]
+        if not string:
+            ret.append(c)
+        if string:
+            curr += c + ' '
+        if c.endswith('"'):
+            string = False
+            curr = curr[:-2]
+            ret.append(curr)
+            curr = ""
+    return ret
+
+
 def run(text):
     if '[INIT]' not in text or '[LOOP]' not in text:
         print("ERROR: Missing INIT or LOOP")
@@ -58,6 +78,10 @@ def parse(text):
                 seconds = float(keywords[3])
                 pyautogui.moveTo(int(x1), int(y1))
                 pyautogui.moveTo(int(x2), int(y2), duration=seconds)
+            
+            elif keywords[0] == 'type':
+                text = extract_string(keywords)
+                pyautogui.typewrite(text[1])
 
             elif keywords[0] == 'exit':
                 sys.exit()
