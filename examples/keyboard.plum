@@ -6,7 +6,7 @@ type "HAX lol (typed with PlumScript)"
 press enter
 
 hold e
-wait 5
+wait 2
 release e
 
 type " hold and release test, PlumScript:tm:"

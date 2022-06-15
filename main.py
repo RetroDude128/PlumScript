@@ -1,7 +1,9 @@
 import pyautogui
 
 import sys
+import os
 import time
+import subprocess
 
 pyautogui.FAILSAFE = False
 
@@ -102,6 +104,14 @@ def parse(text):
                 pyautogui.press(keys[-1])
                 for key in keys[:-1]:
                     pyautogui.keyUp(key)
+
+            elif keywords[0] == 'exec':
+                method = keywords[1]
+                command = " ".join(keywords[2:])
+                if method == "python":
+                    exec(command)
+                elif method == "os":
+                    os.system(command)
 
 
             elif keywords[0] == 'exit':
