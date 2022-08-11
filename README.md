@@ -1,5 +1,5 @@
 # PlumScript
-A language for writing scripts for simulating keyboard and mouse inputs.
+A language for writing scripts for simulating keyboard and mouse inputs. Originally By StudiousGamer
 
 # Syntax
 ## Basic
